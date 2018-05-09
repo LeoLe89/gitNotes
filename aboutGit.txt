@@ -1,0 +1,27 @@
+1.版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。Git是一个分布式版本控制工具。
+2.在学习中，使用的是windows64位系统的2.17.0版本的git。
+3.git的特性：
+	速度、简单的设计、对非线性开发模式的强力支持（允许多并行开发）、完全分布式、有能力高效管理类似Linux内核一样的越大规模项目（速度和数据量）
+	对待数据，直接记录快照，而非差异比较
+	近乎所有操作都是本地执行
+	依靠SHA-1散列的计算校验和机制保证数据的完整性
+	一般只添加数据，在提交成功后很难再丢失数据。
+4.git的工作区域：Working Directory（工作目录）、Staging Area（暂存区域）、.git directory/Repository（git仓库）
+5.git文件的状态：
+	未跟踪（未添加过和已添加但修改后未添加两种）、已跟踪（在暂存区域）、已提交（一次commit到git仓库）
+6.使用命令行执行基本操作：
+	git config --global user.name <name>：在本地用户配置git用户名
+	git config --global user.email <email>：在本地用户配置git邮箱
+	git init：初始化git仓库，仓库名为当前文件夹名称
+	git status：检查当前文件状态
+	git add <file>：将工作区文件添加到暂存区
+	git reset <file>：将暂存区文件撤销回工作区
+	git checkout <file>：将文件回退到最近一次git commit或git add时的状态
+	git rm：移除文件
+	git mv file_from file_to：移动文件
+	git mv README README.md：修改文件名
+	git commit -m <提交的说明信息>：将暂存区文件提交到仓库
+	git remote add origin <url>：将本地已有仓库与服务器关联
+	git push -u origin <分支名称>：将本地库对应分支推送到远程库
+	git clone <url>：从服务器拷贝一个Git仓库到本地
+	git log 查看提交历史
